@@ -1,3 +1,36 @@
+# secure-application-class
+
+#
+ - Apka to [Juiceshop](https://owasp.org/www-project-juice-shop/)
+ - Stoi [tutaj](http://juiceshopwebapp.azurewebsites.net/#/)
+
+
+## Zakres prac
+ - Przygotowanie aplikacji WEB i deployment w cloud (GCP/Azure/AWS)
+ - Prosta strona web z logowaniem (sesją)
+ - Interakcja z użytkownikiem
+ - Baza danych - dowolna
+ - (projekt z Internetu, język dowolny)
+ - Strona dostępna publicznie
+### Dodatkowe wymagania:
+ - Load balancer (idealnie ze skalowaniem)
+ - Domena publiczna (aaa.domen.pl)
+ - Certyfikat SSL/TLS (idealnie nie na serwerze www)
+
+### Obudowanie zbudowanego systemu/usługi/aplikacji mechanizmami ochrony:
+ - SAST
+ - DAST
+ - WAF
+ 
+### Uwierzytelnianie i autoryzacja:
+ - CI/CD
+ - Monitoring sesji
+ - AntiDDoS
+ - IDS/IPS
+
+#### [Google Doc](https://docs.google.com/document/d/1vacliwsLI4lU-BGVwXr9SacAjc9LAb-LU78CVMMg_hE/edit#)
+
+
 # ![Juice Shop Logo](https://raw.githubusercontent.com/juice-shop/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo_100px.png) OWASP Juice Shop
 
 [![OWASP Flagship](https://img.shields.io/badge/owasp-flagship%20project-48A646.svg)](https://owasp.org/projects/#sec-flagships)
