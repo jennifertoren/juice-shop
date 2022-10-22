@@ -23,7 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: npm install
-      - continue-on-error: true
+        continue-on-error: true
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
