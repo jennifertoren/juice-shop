@@ -2,13 +2,30 @@ name: "ZAP Baseline Scan"
 
 on:
   workflow_dispatch:
+    inputs:
+        zap_full:
+          description: 'Scan Juice Shop instance on Azure full'
+          required: true
+          default: 'true'
+        zap_baseline:
+          description: 'Scan Juice Shop instance on Azure baseline'
+          required: true
+          default: 'true'
 
 jobs:
-  zap_scan:
+  zap_scan_full:
     runs-on: ubuntu-latest
-    name: Scan Juice Shop preview instance on Heroku
+    name: Scan Juice Shop instance on Azure full
     steps:
     - name: ZAP Scan
       uses: zaproxy/action-full-scan@v0.4.0
       with:
+        target: 'https://owaspjuiceshopdocker.azurewebsites.net/#/'
+  zap_scan_baseline:
+    runs-on: ubuntu-latest
+    name: Scan Juice Shop instance on Azure baseline
+    steps:
+     - name: OWASP ZAP Baseline Scan
+       uses: zaproxy/action-baseline@v0.7.0
+       with:
         target: 'https://owaspjuiceshopdocker.azurewebsites.net/#/'
